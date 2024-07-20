@@ -9,5 +9,8 @@
     {{ end }}
     <h2 class="author-name">{{ .Site.Params.author.intro }}</h2>
     <p class="author-bio">{{ .Site.Params.author.description }}</p>
+    <div class="footer_social-icons" style="margin-top:10px;">
+        {{- partial "socialIcons.html" site.Params.socialIcons -}}
+    </div>
 </div>
 
