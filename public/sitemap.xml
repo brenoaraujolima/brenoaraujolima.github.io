@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>http://localhost:1313/breno-araujo-dev/</loc>
+    <lastmod>2023-08-18T19:35:28-03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/breno-araujo-dev/posts/</loc>
+    <lastmod>2023-08-18T19:35:28-03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/breno-araujo-dev/posts/jarros-dagua/</loc>
+    <lastmod>2023-08-18T19:35:28-03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/breno-araujo-dev/pages/about/</loc>
+  </url><url>
+    <loc>http://localhost:1313/breno-araujo-dev/categories/</loc>
+  </url><url>
+    <loc>http://localhost:1313/breno-araujo-dev/pages/</loc>
+  </url><url>
+    <loc>http://localhost:1313/breno-araujo-dev/tags/</loc>
+  </url>
+</urlset>
