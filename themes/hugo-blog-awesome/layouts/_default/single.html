@@ -4,12 +4,15 @@
         <article>
             <header class="header">
                 <h1 class="header-title">{{ .Title }}</h1>
-                {{ with .Date }}
-                {{ $ISO_time := dateFormat "2006-01-02T15:04:05-07:00" . }}
-                <div class="post-meta">
+                <span>
+                    {{ .Site.Params.author.intro }}
+                    &nbsp; - &nbsp;
+                    {{ with .Date }}
+                    {{ $ISO_time := dateFormat "2006-01-02T15:04:05-07:00" . }}
                     <time datetime="{{ $ISO_time }}" itemprop="datePublished"> {{ . | time.Format ":date_medium" }} </time>
-                </div>
-                {{ end }}
+                    {{ end }}
+                </span>
+
             </header>
             {{ partial "toc.html" .}}
             <div class="page-content">
