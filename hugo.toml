@@ -186,7 +186,3 @@ url = "https://drive.google.com/file/d/1l7K62MWGo9omkL1j8IGWFNwsow7pF54J/view?us
 
 [params]
   goToTop = true
-
-[caches]
-  [caches.images]
-    dir = ':cacheDir/images'
