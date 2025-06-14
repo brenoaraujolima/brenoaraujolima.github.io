@@ -4,7 +4,7 @@ date = 2025-02-08T06:39:17-03:00
 draft = false
 +++
 
-![regex-feeling-of-power](/breno-araujo-dev/regex-feelings-of-power.png)
+![regex-feeling-of-power](/regex-feelings-of-power.png)
 
 In a incredibly data-rich world we lived in, knowing how to deal with huge strings, either to extract relevant information or replacing some piece of data or even to simply detect the presence of some pattern in a fast way is absolutely crucial. That’s why regular expressions are a very important topic and such a powerful tool to have under your belt as a developer, once they can bring a boost of productivity in your daily routine.
 
