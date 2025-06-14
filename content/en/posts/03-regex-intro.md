@@ -28,7 +28,7 @@ Although regular expressions may seem like something that only the most hardcore
 
 Just to clarify this concept, imagine that we’re trying to understand the werewolves language.
 
-![howling-wolf](/howling-wolf.png)
+![howling-wolf](/howling-wolf.png) 
 
 Their vocabulary is very limited. They only use the following word pattern to make their sentences: starts with letter ‘a’, followed by letter ‘w’, followed by 2 or more instances of letter ‘o’. Finally, there’s an exclamation mark to enforce respect around the gang. Thus, the following are some word examples that a werewolf can express.
 
