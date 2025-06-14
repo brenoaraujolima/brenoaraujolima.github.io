@@ -76,11 +76,11 @@ Trocando em miúdos, um estado é como se fosse uma fotografia demonstrativa da 
 
 Logo, para um estado genérico (x,y) temos os seguintes conjuntos de vizinhos
 
-![conjunto-vizinhos](/breno-araujo-dev/conjunto-vizinhos.png)
+![conjunto-vizinhos](/conjunto-vizinhos.png)
 
 Perceba que os casos de transferência de água de um jarro para outro estão omitidos, pois esses estados necessitam de uma verificação prévia para sabermos se a transferência em questão resultará em um dos jarros vazios ou em dos jarros cheios. A legenda abaixo ilustra o que deve ser feito nessas situações
 
-![legenda-vizinhos](/breno-araujo-dev/legenda-vizinhos.png)
+![legenda-vizinhos](/legenda-vizinhos.png)
 
 ## Resolvendo através da busca em largura
 
@@ -102,7 +102,7 @@ Minha implementação em C, da resolução desse problema, segue abaixo. Apesar 
 
 Exemplo da saída para os valores a = 3, b = 5 e c = 4.
 
-![output](/breno-araujo-dev/output.png)
+![output](/output.png)
 
 
 

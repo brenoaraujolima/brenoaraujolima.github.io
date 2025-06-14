@@ -28,7 +28,7 @@ Although regular expressions may seem like something that only the most hardcore
 
 Just to clarify this concept, imagine that we’re trying to understand the werewolves language.
 
-![howling-wolf](/breno-araujo-dev/howling-wolf.png)
+![howling-wolf](/howling-wolf.png)
 
 Their vocabulary is very limited. They only use the following word pattern to make their sentences: starts with letter ‘a’, followed by letter ‘w’, followed by 2 or more instances of letter ‘o’. Finally, there’s an exclamation mark to enforce respect around the gang. Thus, the following are some word examples that a werewolf can express.
 
@@ -40,7 +40,7 @@ Their vocabulary is very limited. They only use the following word pattern to ma
 
 So, what we gotta do now is figuring out a pattern that covers all these different werewolves words. That’s the point where a regular expression comes in. Fortunately(and conveniently, in this case), all words of werewolves vocabulary can be expressed by a simple regex. Take a look on its structure.
 
-![howling-wolf](/breno-araujo-dev/regex-werewolves.png)
+![howling-wolf](/regex-werewolves.png)
 
 First of all, an important thing to remember is that all regular expressions live inside delimiters. These are the boundaries of your regex. The most common character used as delimiter is the slash(“/”), but it can be any other. It depends on syntax standard used(PCRE, POSIX and so on). 
 
@@ -113,7 +113,7 @@ Finally, our regexes only will make sense if there’s some entity able to inter
 A regex engine receives two inputs: a regular expression and an input text.
 In turn, the result return may vary. Commonly, It can be only a boolean value indicating the presence/absence of the pattern described by regex or it can be a list of input text’s substrings that match the pattern. All depends on your own needs.
 
-![regex-engine](/breno-araujo-dev/regex-engine.png)
+![regex-engine](/regex-engine.png)
 
 ## Conclusion
 

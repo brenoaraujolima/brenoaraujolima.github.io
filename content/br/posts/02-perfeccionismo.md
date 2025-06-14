@@ -4,7 +4,7 @@ date = 2024-01-05T06:39:17-03:00
 draft = false
 +++
 
-![progresso_vs_perfeccionismo](/breno-araujo-dev/progresso_vs_perfeccionismo.png)
+![progresso_vs_perfeccionismo](/progresso_vs_perfeccionismo.png)
 
 Parece haver um certo orgulho implícito de quem afirma ser perfeccionista. E isso é mais do que natural, afinal de contas, entregar um trabalho impecável é algo bastante admirável e visto com bons olhos por todos. Ao longo da história, personalidades como Beethoven, Gauss e Michelangelo, por exemplo, impressionaram a todos pelo alto grau de desempenho e pela maestria em suas respectivas áreas de atuação, sendo imensamente abraçados pela cultura de uma sociedade que, mesmo na modernidade, ainda valoriza e exalta a busca pela perfeição.
 
@@ -33,7 +33,7 @@ Não à toa, pessoas que carregam consigo esse problema tendem a ter uma [maior 
 Por vezes, o perfeccionista trava a própria evolução por encontrar-se preso tentando melhorar uma subtarefa minúscula dentro de uma atividade e/ou projeto maior. É como se ele tivesse disponíveis 5h para realizar uma faxina em toda a sua casa, mas gastasse 4h30min limpando exclusivamente o espelho do banheiro de modo impecável. O resultado é uma corrida descomunal para conseguir entregar tudo no prazo, levando a uma queda considerável na qualidade do trabalho como um todo, uma entrega final pífia e uma imensa autocobrança acompanhada de uma profunda sensação de fracasso e arrependimento por não ter feito algo melhor.
 
 <figure>
-    <img src="/breno-araujo-dev/writing.png"
+    <img src="/writing.png"
          alt="carta-toinha">
     <figcaption>
         Daqui a pouco eu envio a carta pra Toinha, deixa só eu consertar um negocinho aqui no segundo parágrafo.
@@ -43,7 +43,7 @@ Por vezes, o perfeccionista trava a própria evolução por encontrar-se preso t
 Há ainda aqueles que acreditam nunca estarem prontos para as situações e desafios que a vida apresenta. Sendo assim, muitas oportunidades de ouro são perdidas pela simples e, muitas vezes enganosa, crença de não estarem 100% preparados ou ainda não ser o momento ideal para a mudança. De acordo com esse pensamento, nunca é o momento ideal para começar o próprio negócio. Nunca é o momento ideal para iniciar uma pós-graduação ou aprender um novo idioma. Nunca é o momento ideal para morar fora do país. Nunca é o momento ideal para praticar exercícios físicos diários e nunca é o momento ideal para dar o próximo passo e progredir.
 
 <figure>
-    <img src="/breno-araujo-dev/wardrobe.png"
+    <img src="/wardrobe.png"
          alt="escolha-roupa">
     <figcaption>
         Ah, essa roupa aqui cairia muito bem hoje. Mas vou guardá-la para uma ocasião mais especial.
@@ -78,4 +78,4 @@ Diante de tudo isso, fica evidente que a chave para diminuir a pressão e as alt
 
 Aprenda a apreciar o processo em si. Aproveitar a viagem enquanto ela está sendo realizada pode ser bem mais benéfico e interessante do que lamentar-se constantemente por ainda não ter chegado ao destino final.
 
-![final-quote](/breno-araujo-dev/aristoteles-quote.png)
+![final-quote](/aristoteles-quote.png)
