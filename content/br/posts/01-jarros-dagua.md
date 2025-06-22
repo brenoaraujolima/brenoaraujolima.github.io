@@ -4,6 +4,8 @@ date = 2023-08-18T19:35:28-03:00
 draft = false
 +++
 
+![water-jugs](/water-jugs.png)
+
 Recentemente, me deparei com um puzzle bem interessante que remonta a antiguidade e que pode ser resolvido utilizando algoritmos bem conhecidos da área de teoria dos grafos, como busca em largura, por exemplo. Nesse post descrevo a maneira que tentei resolver esse problema.
 
 ## O problema

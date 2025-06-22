@@ -37,7 +37,7 @@
                     <span>|</span>
                 </li>
                 <!-- Language List -->
-                {{ if .IsTranslated }}
+                <!-- {{ if .IsTranslated }} -->
                     <li>
                         <select aria-label="Select Language" class="lang-list" id="select-language" onchange="location = this.value;">
                             {{ $siteLanguages := .Site.Languages}}
@@ -61,7 +61,7 @@
                     <li class="menu-separator">
                         <span>|</span>
                     </li>
-                {{ end }}
+                <!-- {{ end }} -->
             </ul>
             <a id="mode" href="#">
                 {{ partial "svgs/sun.svg" (dict "height" 21 "width" 21 "class" "mode-sunny" "title" "LIGHT") . }}

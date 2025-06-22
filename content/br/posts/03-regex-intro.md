@@ -1,36 +1,38 @@
 +++
-title = 'Regular Expressions: A brief introduction'
+title = 'Expressões regulares: Uma introdução'
 date = 2025-02-08T06:39:17-03:00
 draft = false
 +++
 
 ![regex-feeling-of-power](/regex-feelings-of-power.png)
 
-In a incredibly data-rich world we lived in, knowing how to deal with huge strings, either to extract relevant information or replacing some piece of data or even to simply detect the presence of some pattern in a fast way is absolutely crucial. That’s why regular expressions are a very important topic and such a powerful tool to have under your belt as a developer, once they can bring a boost of productivity in your daily routine.
+No mundo incrivelmente rico em dados em que vivemos, saber lidar com grandes cadeias de texto, seja para extrair informações relevantes, substituir algum trecho de dados ou até mesmo simplesmente detectar a presença de algum padrão de forma rápida, é absolutamente crucial. Por isso, compreender expressões regulares é uma ferramenta poderosa para se ter no seu arsenal como desenvolvedor, pois pode trazer um ganho de produtividade na sua rotina diária.
 
-## Applicabilities
+## Aplicações
 
-Its significance lies in the simple fact that regular expressions serve a wide range of purposes. In practice, to list a few of them, imagine that you’re stuck in some of the following situations:
+Sua importância reside no simples fato de que expressões regulares servem para uma ampla variedade de propósitos. Na prática, para listar alguns exemplos, imagine que você está preso em alguma das seguintes situações:
 
 <ol>
-    <li>Web scraping - There’s a  full HTML page and you’d like to extract all the URL’s from this text;</li>
-    <li>Form Validation - You’re handling with a huge form with hundreds of fields and you need to build customized validations to each one of them: an email must ends with @domain.com and cannot have specific special characters. A phone number must contain only numbers with a determined quantity of digits and so on;</li>
-    <li>Log Analysis - In a log application analysis, where you’d like to extract only the relevant information about a class or a specific file from an endless stack trace.</li>
+    <li>Web scraping - Há uma página HTML em que você deseja extrair todas as URL's contidas no texto;</li>
+    <li>Validação de formulário - Você está lidando com um formulário que possui centenas de campos e precisa csontruir validações customizadas para cada um deles: um email deve terminar com @domain.com e não pode possui caracteres especiais. Um número de telefone deve conter apenas números com uma determinada quantidade de dígitos, etc;</li>
+    <li>Análise de Log - Em uma análise de log de uma aplicação, onde você gostaria de extrair apenas as informações relevantes de uma classe ou de um arquivo específico a partir de um enorme stack trace.</li>
 </ol>
 
-In all of this cases, regular expressions can help and save you hours of work.
+Em todos esses casos, as expressões regulares podem ajudar e te salvar de horas de trabalho.
 
-## But, What the heck is that, anyway ?
+## Mas, o que é isso, afinal ?
 
-Although regular expressions may seem like something that only the most hardcore programmers would touch, they are nothing but a sequence of symbols that specifies a text pattern. This pattern can be intended as a rule that will be, in turn, tested against a certain input text, returning a positive result if the rule matches some substring of input text. A negative result will be returned, otherwise.
+Embora as expressões regulares possam parecer algo que apenas os programadores mais hardcore usariam, elas nada mais são do que uma sequência de símbolos que especifica um padrão de texto. Esse padrão pode ser entendido como uma regra que, por sua vez, será testada contra um determinado texto de entrada, retornando um resultado positivo se a regra corresponder a alguma substring do texto de entrada. Caso contrário, será retornado um resultado negativo.
 
-## Studying the werewolves vocabulary
+## Estudando o vocabulário dos lobisomens.
 
-Just to clarify this concept, imagine that we’re trying to understand the werewolves language.
+Apenas para esclarecer esse conceito, imagine que nós estamos tentando entender a língua dos lobisomens.
 
 ![howling-wolf](/howling-wolf.png)
 
 Their vocabulary is very limited. They only use the following word pattern to make their sentences: starts with letter ‘a’, followed by letter ‘w’, followed by 2 or more instances of letter ‘o’. Finally, there’s an exclamation mark to enforce respect around the gang. Thus, the following are some word examples that a werewolf can express.
+
+Seu vocabulário é extremamente limitado. Eles apenas usam o seguinte padrão de construção de palavra para formar suas frases: uma palavra inicia com a letra 'a', seguida pela letra 'w', seguida por 2 ou mais instâncias da letra 'o'. Por fim, há sempre um ponto de exclamação para impor respeito aos demais membros da alcateia. Portanto, abaixo constam alguns exemplos de palavras que um lobisomem pode expressar.
 
 <ul>
     <li>awoo!</li>
@@ -38,84 +40,62 @@ Their vocabulary is very limited. They only use the following word pattern to ma
     <li>awoooooooo!</li>
 </ul>
 
-So, what we gotta do now is figuring out a pattern that covers all these different werewolves words. That’s the point where a regular expression comes in. Fortunately(and conveniently, in this case), all words of werewolves vocabulary can be expressed by a simple regex. Take a look on its structure.
+
+Então, o que precisamos fazer agora é descobrir um padrão que consiga representar todas essas diferentes palavras de  lobisomens. Esse é o ponto onde uma expressão regular vem a calhar. Felizmente (e convenientemente, neste caso), todas as palavras do vocabulário de lobisomens podem ser expressas por uma regex simples. Dê uma olhada na sua estrutura.
 
 ![howling-wolf](/regex-werewolves.png)
 
-First of all, an important thing to remember is that all regular expressions live inside delimiters. These are the boundaries of your regex. The most common character used as delimiter is the slash(“/”), but it can be any other. It depends on syntax standard used(PCRE, POSIX and so on). 
+Antes de mais nada, algo importante de lembrar é que todas as expressões regulares residem dentro de delimitadores. Estas são as fronteiras de sua expressão regular. O caractere mais comum que é utilizado como delimitador é uma batta("/"), mas isso pode variar dependento do padrão de sintaxe utilizado(PCRE, POSIX, etc).
 
-Now, analyzing this regex, we have:
-
-<ul>
-    <li>
-        awo: This is the start of the pattern. So, till this part, It means that for there to be chances of a match occurring, the input text must contains a substring starting with awo, necessarily.
-    </li>
-    <li>
-        o+: The ‘o’ character matches literally the ‘o ’ character. The ‘+’ is called a quantifier and it means “one or more”. It’ll match one or more occurrences of the previous character. In this case, ‘o’. 
-    </li>
-    <li>
-        !: It’s the end of pattern. Matches exactly the ‘!’ character.
-    </li>
-</ul>
-
-Therefore, our regular expression will give us a positive answer to all of the following input texts: awooo!, awooo!, awooooo! and so on.
-
-A warning point in this regex is that depending on what’s gonna be our universe set of input strings, that’s not gonna work as expected. This regex works fine to detect if a specified word belongs to werewolve’s language in our input, but if our goal is knowing how many words of werewolves vocabulary are present in a huge given text, for example, it is gonna fail, once our regex matches only the first occurrence of this pattern. This problem can be easily solved by using a device called “global flag” that will detect all occurrences of pattern, but I don’t wanna go in these details now, so let’s assume that our input text is only a single word that can be or not part of the werewolves language.
-
-## Other examples
-
-The previously topic was a very simple example, just to introduce you to the wonderful world of regex. But, believe me, as far as expressions are getting more powerful, they’re also getting more complex. Just to give you a quickly view of how powerful regular expressions can be, take a look of these another examples.
-
-<!-- <table>
-  <tr>
-    <th>Regex</th>
-    <th>Function</th>
-  </tr>
-  <tr>
-    <td>/\/[^\r\n]*[\r\n]/g</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>/\d{5}-\d{4}|\d{5}/g</td>
-    <td>Search for zip-codes in a text</td>
-  </tr>
-  <tr>
-    <td>/^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6})*$/gm</td>
-    <td>An email validation</td>
-  </tr>
-  <tr>
-    <td>/(?=(.*[0-9]))(?=.*[\!@#$%^&*()\\[\]{}\-_+=~`|:;"'<>,./?])(?=.*[a-z])(?=(.*[A-Z]))(?=(.*)).{8,}/</td>
-    <td>Check if a given password is strength, i.e., if it has, at minimum, 1 lowercase letter, 1 uppercase letter, 1 number, 1 special character and be at least 8 characters long.</td>
-  </tr>
-</table> -->
+Assim, analisando essa regex, temos:
 
 <ul>
     <li>
-        <b>/\/[^\r\n]*[\r\n]/g</b>  → Detect if a code contains comments of “slash-slash” type;
+        awo: Este é o começo do padrão. Logo, até este ponto, significa que para existirem chances de um "match" ocorrer, o texto de entrada deve conter uma substring começando com awo, obrigatoriamente.
     </li>
     <li>
-       <b>/\d{5}-\d{4}|\d{5}/g</b>  → Search for zip-codes in a text;
+        o+: O caractere 'o' casa literalmente o próprio caractere 'o'. O '+' é chamado de quantificador e significa "um ou mais". Ele irá casar uma ou mais ocorrências do caractere imediatamente anterior,nesse caso, 'o'.
     </li>
     <li>
-        <b>/^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6})*$/gm</b>  → An email validation
-    </li>
-    <li>
-        <b>/(?=(.*[0-9]))(?=.*[\!@#$%^&*()\\[\]{}\-_+=~`|:;"'<>,./?])(?=.*[a-z])(?=(.*[A-Z]))(?=(.*)).{8,}/</b>  →  Check if a given password is strength, i.e., if it has, at minimum, 1 lowercase letter, 1 uppercase letter, 1 number, 1 special character and be at least 8 characters long.
+        !: É o fim do padrão. Casa exatamente o caractere '!'.
     </li>
 </ul>
 
-Don’t be scared if it isn’t one of the most understandable things that you already saw. Our goal is to comprehend, slowly and step by step, the basic building blocks of this mysterious puzzle.
+Portanto, nossa expressão regular nos dará uma resposta positiva para todos os seguintes textos de entrada: awooo!, awoo!, awoooo! e assim por diante.
+
+Um ponto de atenção nessa regex é que, dependendo de qual for o nosso conjunto universo de strings de entrada, ela pode não funcionar como esperado. Essa regex funciona bem para detectar se uma palavra específica pertence à “língua dos lobisomens” no nosso input, mas, se o nosso objetivo for saber quantas palavras do vocabulário dos lobisomens estão presentes em um texto grande, por exemplo, ela vai falhar, uma vez que nossa regex só corresponde à primeira ocorrência desse padrão. Esse problema pode ser facilmente resolvido utilizando um recurso chamado "global flag", que detectará todas as ocorrências do padrão, mas não quero entrar nesses detalhes agora, então vamos assumir que nosso texto de entrada é apenas uma única palavra, que pode ou não fazer parte da linguagem dos lobisomens.
+
+## Outros exemplos
+
+O tópico anterior foi um exemplo bem simples, apenas para te familiarizar com o maravilhoso mundo das regex. Mas, acredite, à medida que as expressões vão ficando mais poderosas, elas também vão ficando mais complexas. Só para te dar uma visão rápida de quão poderosas as expressões regulares podem ser, dê uma olhada nesses outros exemplos.
+
+<ul>
+    <li>
+        <b>/\/[^\r\n]*[\r\n]/g</b>  → Detecta se um código contém comentários do tipo // ;
+    </li>
+    <li>
+       <b>/\d{5}-\d{4}|\d{5}/g</b>  → Busca por CEP's em um texto;
+    </li>
+    <li>
+        <b>/^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6})*$/gm</b>  → Uma validação de email
+    </li>
+    <li>
+        <b>/(?=(.*[0-9]))(?=.*[\!@#$%^&*()\\[\]{}\-_+=~`|:;"'<>,./?])(?=.*[a-z])(?=(.*[A-Z]))(?=(.*)).{8,}/</b>  →  Checa se uma senha é forte, i.e., se contém, no mínimo, 1 letra minúscula, 1 letra maiúscula, 1 número, 1 caractere especial e tenha pelo menos 8 caracteres de tamanho.
+    </li>
+</ul>
+
+Não se assuste se não for uma das coisas mais compreensíveis que você já viu. Nosso objetivo é entender, devagar e passo a passo, os blocos básicos de construção desse enigmático quebra-cabeça.
 
 ## Regex engines
 
-Finally, our regexes only will make sense if there’s some entity able to interpret them, test against an input text and delivering us a result from this processing. This entity is called a regex engine.
+Por fim, nossas expressões regulares só farão sentido se houver alguma entidade capaz de interpretá-las, testá-las contra um texto de entrada e nos entregar um resultado desse processamento. Essa entidade é chamada de regex engine.
 
-A regex engine receives two inputs: a regular expression and an input text.
-In turn, the result return may vary. Commonly, It can be only a boolean value indicating the presence/absence of the pattern described by regex or it can be a list of input text’s substrings that match the pattern. All depends on your own needs.
+Uma regex engine recebe dois inputs: uma expressão regular e um texto de entrada.
+O resultado final pode variar. Pode ser apenas um valor booleano indicando a presença ou ausência do padrão descrito pela regex, ou pode ser uma lista de substrings do texto de entrada que correspondem ao padrão. Tudo depende da sua necessidade.
 
 ![regex-engine](/regex-engine.png)
 
-## Conclusion
+## Conclusão
 
-So, in this brief introduction we present you to the regular expressions world and their applicabilities. In the upcoming articles we will dive deeper in knowing the main characters, their meanings and how to apply them.
+Então, nessa breve introdução, te apresentamos ao mundo das expressões regulares e suas aplicabilidades. Nos próximos artigos, vamos nos aprofundar mais para conhecer os principais caracteres, seus significados e como aplicá-los.
 
