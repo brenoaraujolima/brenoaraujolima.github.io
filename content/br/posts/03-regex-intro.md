@@ -1,5 +1,5 @@
 +++
-title = 'Expressões regulares: Uma introdução'
+title = 'Expressões regulares: Uma breve introdução'
 date = 2025-02-08T06:39:17-03:00
 draft = false
 +++
